@@ -2143,7 +2143,7 @@
                 );
                 UpdateContext({rejectpopup: false});
                 Notify(
-                    "The study is Rejected successfully",
+                    "The initiative is Rejected successfully",
                     NotificationType.Success
                 );
                 Clear(ValueofId);
