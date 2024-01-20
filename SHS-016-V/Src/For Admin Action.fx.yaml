@@ -1357,7 +1357,7 @@
             DefaultMode: =FormMode.View
             FillPortions: =0
             Height: =230
-            Item: =Gallery_study_3.Selected
+            Item: =Gallery_study_4.Selected
             LayoutMinHeight: =250
             LayoutMinWidth: =400
             NumberOfColumns: =6

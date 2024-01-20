@@ -1,16 +1,12 @@
 Dashboard As screen:
 
-    compDB As Component1:
-        Height: =768
-        ZIndex: =4
-
     Container4 As groupContainer.horizontalAutoLayoutContainer:
         Height: =645
         LayoutMode: =LayoutMode.Auto
         Width: =App.Width-compDB.VarMenuWidth
         X: =compDB.VarMenuWidth
         Y: =123
-        ZIndex: =5
+        ZIndex: =1
 
         DashboardGallery As gallery.galleryVertical:
             DelayItemLoading: =true
@@ -80,4 +76,8 @@ Dashboard As screen:
                         Width: =Parent.Width-50
                         X: =25
                         ZIndex: =2
+
+    compDB As Component1:
+        Height: =768
+        ZIndex: =2
 

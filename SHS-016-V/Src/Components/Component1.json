@@ -2443,7 +2443,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(VarExpandMeu,!VarExpandMeu);\r\nNavigate(ThisItem.TargetScreen,Transition.None);",
+                "InvariantScript": "Set(VarExpandMeu,!VarExpandMeu);\nNavigate(ThisItem.TargetScreen,Transition.None);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -2911,7 +2911,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "\r\nSet(VarExpandMeu,false);",
+                "InvariantScript": "\nSet(VarExpandMeu,false);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3146,13 +3146,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(ThisItem.Title=\"Dashboard\",false,If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu,true))\r\n",
+                "InvariantScript": "If(ThisItem.Title=\"Dashboard\",false,If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu,true))\n",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Select(Parent);\r\nSet(VarExpandMeu,true);",
+                "InvariantScript": "Select(Parent);\nSet(VarExpandMeu,true);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3588,7 +3588,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\r\nNavigate(ThisItem.TargetScreen,Transition.None);",
+                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\nNavigate(ThisItem.TargetScreen,Transition.None);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -4020,7 +4020,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(\r\n    ThisItem.Title = \"Dashboard\",\r\n    0,\r\n    If(\r\n        ThisItem.Title = \"Inbox\",\r\n        140,\r\n        If(\r\n            ThisItem.Title = \"Administration\",\r\n            370,\r\n            If(\r\n                ThisItem.Title = \"Settings\",\r\n                50,\r\n                If(\r\n                    ThisItem.Title = \"Configuration\",\r\n                    110,\r\n                    0\r\n                )\r\n            )\r\n \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0)\r\n\u00A0\u00A0\u00A0\u00A0)\r\n)",
+                "InvariantScript": "If(\n    ThisItem.Title = \"Dashboard\",\n    0,\n    If(\n        ThisItem.Title = \"Inbox\",\n        140,\n        If(\n            ThisItem.Title = \"Administration\",\n            370,\n            If(\n                ThisItem.Title = \"Settings\",\n                50,\n                If(\n                    ThisItem.Title = \"Configuration\",\n                    110,\n                    0\n                )\n            )\n \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0)\n\u00A0\u00A0\u00A0\u00A0)\n)",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -4553,7 +4553,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\r\nNavigate(ThisItem.TargetScreen,Transition.None);",
+                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\nNavigate(ThisItem.TargetScreen,Transition.None);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -5048,7 +5048,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "//If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu)\r\nfalse",
+                "InvariantScript": "//If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu)\nfalse",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
@@ -6015,7 +6015,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638413266820906732",
+    "LastModifiedTimestamp": "638413285409459924",
     "Name": "Component1",
     "Rules": [
       {
@@ -6225,7 +6225,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638413266820906732",
+  "LastModifiedTimestamp": "638413285409459924",
   "Name": "415e1786c3c94354acf26afaf63ccb82",
   "OverridableProperties": {},
   "Version": "638327128456687156"
