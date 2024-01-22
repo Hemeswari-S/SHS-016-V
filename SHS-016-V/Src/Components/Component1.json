@@ -2293,7 +2293,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(ThisItem.Title=VarCureentSubTab,Color.AliceBlue,RGBA(0, 0, 0, 0))",
+                "InvariantScript": "If(ThisItem.Title=MainMenu.Selected.Title,Color.AliceBlue,RGBA(0, 0, 0, 0))",
                 "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
@@ -2443,7 +2443,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(VarExpandMeu,!VarExpandMeu);\nNavigate(ThisItem.TargetScreen,Transition.None);\nSet(VarCurrentMainTab,ThisItem.Title);\n",
+                "InvariantScript": "Set(VarExpandMeu,!VarExpandMeu);\nNavigate(ThisItem.TargetScreen,Transition.None);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3588,7 +3588,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(VarCureentSubTab,ThisItem.Title);\nNavigate(ThisItem.TargetScreen,Transition.None);\n",
+                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\nNavigate(ThisItem.TargetScreen,Transition.None);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -4104,7 +4104,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(ThisItem.Title=MainMenu.Selected.Title,VarExpandMeu)",
+                "InvariantScript": "If(ThisItem.Title=MainMenu.Selected.Title,VarExpandMeu,false)",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
@@ -6013,25 +6013,9 @@
         "InvariantPropertyName": "LoginNameMenu",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
-      },
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "\"Text\"",
-        "InvariantPropertyName": "CurrentMainTab",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "\"Text\"",
-        "InvariantPropertyName": "CurrentSubTab",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638415008322138686",
+    "LastModifiedTimestamp": "638414366567496334",
     "Name": "Component1",
     "Rules": [
       {
@@ -6092,18 +6076,6 @@
         "Category": "Data",
         "InvariantScript": "If(\n    VarUSerName = \"admin\",\n    Table({Title: \"A\",color: Color.DeepPink}),\n    If(\n        VarUSerName = \"champion\",\n        Table(\n            {\n                Title: \"C\",\n                color: Color.DeepSkyBlue\n            }\n        ),\n        If(\n            VarUSerName = \"approver1\",\n            Table(\n                {\n                    Title: \"A1\",\n                    color: Color.DarkBlue\n                }\n            ),\n            If(\n                VarUSerName = \"approver2\",\n                Table(\n                    {\n                        Title: \"A2\",\n                        color: Color.DarkViolet\n                    }\n                ),\n                If(\n                    VarUSerName = \"approver3\",\n                    Table(\n                        {\n                            Title: \"A3\",\n                            color: Color.DarkCyan\n                        }\n                    ),\n                    If(\n                        VarUSerName = \"approver4\",\n                        Table(\n                            {\n                                Title: \"A4\",\n                                color: Color.DarkSalmon\n                            }\n                        )\n                    )\n                )\n            )\n        )\n    )\n)",
         "Property": "LoginNameMenu",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "VarCurrentMainTab",
-        "Property": "CurrentMainTab",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "VarCureentSubTab",
-        "Property": "CurrentSubTab",
         "RuleProviderType": "System"
       },
       {
@@ -6271,7 +6243,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638415008322138686",
+  "LastModifiedTimestamp": "638414366567496334",
   "Name": "415e1786c3c94354acf26afaf63ccb82",
   "OverridableProperties": {},
   "Version": "638327128456687156"
