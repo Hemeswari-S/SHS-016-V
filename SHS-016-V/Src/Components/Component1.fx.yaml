@@ -13,7 +13,9 @@ Component1 As CanvasComponent:
             }
         )
     ComHeaderHeight: =Container1.Height
+    CurrentMainTab: =VarCurrentMainTab
     CurrentScreen: ="Text"
+    CurrentSubTab: =VarCureentSubTab
     Fill: =RGBA(0, 0, 0, 0)
     Height: =900
     IsSubMenuVisible: =true
@@ -419,7 +421,7 @@ Component1 As CanvasComponent:
             ShowScrollbar: =false
             TemplateFill: =If(CureentScreen=ThisItem.Title,Color.Aqua,Color.AliceBlue)
             TemplateSize: =35
-            Visible: =If(ThisItem.Title=MainMenu.Selected.Title,VarExpandMeu,false)
+            Visible: =If(ThisItem.Title=MainMenu.Selected.Title,VarExpandMeu)
             Width: =If(ShowMenu,App.Width/5,0)
             Y: =Label42.Height
             ZIndex: =1
@@ -428,8 +430,8 @@ Component1 As CanvasComponent:
                 Fill: =If(ThisItem.Title=MainMenu.Selected.Title,Color.Blue,RGBA(0, 0, 0, 0))
                 FontWeight: =FontWeight.Semibold
                 HoverFill: =Color.AntiqueWhite
-                OnSelect: |-
-                    =Set(CureentScreen,ThisItem.Title);
+                OnSelect: |
+                    =Set(VarCureentSubTab,ThisItem.Title);
                     Navigate(ThisItem.TargetScreen,Transition.None);
                 PaddingLeft: =75
                 PressedFill: =Color.Aqua
@@ -447,11 +449,12 @@ Component1 As CanvasComponent:
                 ZIndex: =2
 
         Label42 As label:
-            Fill: =If(ThisItem.Title=MainMenu.Selected.Title,Color.AliceBlue,RGBA(0, 0, 0, 0))
+            Fill: =If(ThisItem.Title=VarCureentSubTab,Color.AliceBlue,RGBA(0, 0, 0, 0))
             FontWeight: =FontWeight.Semibold
-            OnSelect: |-
+            OnSelect: |
                 =Set(VarExpandMeu,!VarExpandMeu);
                 Navigate(ThisItem.TargetScreen,Transition.None);
+                Set(VarCurrentMainTab,ThisItem.Title);
             PaddingLeft: =40
             Text: =ThisItem.Title
             Width: =MainMenu.Width
